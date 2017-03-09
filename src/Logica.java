@@ -13,6 +13,7 @@ public class Logica {
 		nombreIni = app.loadStrings("../data/usuarios.txt");
 		datosIni = app.loadStrings("informacion.txt");
 		color = app.loadStrings("tonos.txt");
+		dividirTexto();
 	}
 	
 	public void dividirTexto(){
@@ -30,6 +31,13 @@ public class Logica {
 			int b = Integer.parseInt(color[2]);
 
 			palabras.add(new Palabra(app,nombre,apellido,cedula,edad,peso,r,g,b));
+		}
+	}
+	
+	public void pintar(){
+		for (int i = 0; i < nombreIni.length; i++) {
+			Palabra p = palabras.get(i);
+			p.pintar();
 		}
 	}
 	
