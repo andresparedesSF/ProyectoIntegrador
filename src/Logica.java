@@ -35,10 +35,15 @@ public class Logica {
 	}
 	
 	public void pintar(){
+		
 		for (int i = 0; i < nombreIni.length; i++) {
 			Palabra p = palabras.get(i);
 			p.pintar();
 		}
+	}
+	
+	private void ordenar() {
+		
 	}
 	
 }

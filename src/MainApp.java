@@ -20,6 +20,7 @@ public class MainApp extends PApplet{
 	
 	@Override
 	public void draw() {
+		background(0);
 		app.pintar();
 	}
 }
