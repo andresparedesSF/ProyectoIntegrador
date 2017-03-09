@@ -1,6 +1,7 @@
 import processing.core.PApplet;
 
 public class Palabra {
+	
 	private PApplet app;
 	private String nombre,apellido,cedula;
 	private int edad,peso,r,g,b,posX,posY;
@@ -21,9 +22,9 @@ public class Palabra {
 		
 	}
 	
-	public void pintar(){
+	public void pintar(int x, int y){
 		app.fill(r,g,b);
-		app.text(nombre + " " + apellido + " " + cedula + " " + edad + " "+ peso + " " , posX, posY);
+		app.text(nombre + " " + apellido + " " + cedula + " " + edad + " "+ peso + " " , x, y);
 	}
 
 	public PApplet getApp() {
