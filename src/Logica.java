@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.TreeSet;
 
 import processing.core.PApplet;
 
@@ -8,6 +9,8 @@ public class Logica {
 	private PApplet app;
 	private String[] nombreIni,datosIni,color;
 	private ArrayList<Palabra> palabras;
+	private ArrayList<Palabra> backup = new ArrayList<Palabra>();
+	private TreeSet<Palabra> ord = new TreeSet<Palabra>(new CPeso());
 	
 	public Logica(PApplet app){
 		this.app = app;
@@ -32,9 +35,11 @@ public class Logica {
 			int r = Integer.valueOf(colorDiv[0]);
 			int g = Integer.valueOf(colorDiv[1]);
 			int b = Integer.valueOf(colorDiv[2]);
-			PApplet.printArray(peso);
 			palabras.add(new Palabra(app,nombre,apellido,cedula,edad,peso,r,g,b));
+			PApplet.printArray(peso);
 		}
+		
+	backup.addAll(palabras);
 	}
 	
 	public void pintar(){
@@ -47,8 +52,16 @@ public class Logica {
 	
 	public void teclado() {
 		
-		if(app.key == 'q'){
+		if(app.key == '1'){
+			//palabras.clear();
+			//backup.addAll(palabras);
 			Collections.sort(palabras);
+		}
+		
+		if(app.key == '2'){
+			palabras.clear();
+			palabras.addAll(backup);
+			Collections.sort(palabras, new CPeso());
 		}
 		
 		
