@@ -53,21 +53,21 @@ public class Logica {
 	public void teclado() {
 		
 		if(app.key == '1'){
-			//palabras.clear();
-			//backup.addAll(palabras);
+			palabras.clear();
+			palabras.addAll(backup);
 			Collections.sort(palabras);
 		}
 		
 		if(app.key == '2'){
 			palabras.clear();
 			palabras.addAll(backup);
-			Collections.sort(palabras, new CPeso());
+			Collections.sort(palabras, new CEdad());
 		}
 		
 		if(app.key == '3'){
 			palabras.clear();
-			palabras.addAll(backup);
-			Collections.sort(palabras, new CEdad());
+			ord.addAll(backup);
+			palabras.addAll(ord);
 		}
 		
 	}
