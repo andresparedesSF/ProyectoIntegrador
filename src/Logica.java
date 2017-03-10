@@ -11,6 +11,7 @@ public class Logica {
 	private ArrayList<Palabra> palabras;
 	private ArrayList<Palabra> backup = new ArrayList<Palabra>();
 	private TreeSet<Palabra> ord = new TreeSet<Palabra>(new CPeso());
+	//private Hashset<Palabra> des = new HashSet<Palabra>(new CPeso());
 	
 	public Logica(PApplet app){
 		this.app = app;
@@ -69,6 +70,10 @@ public class Logica {
 			ord.addAll(backup);
 			palabras.addAll(ord);
 		}
+		
+		//if(app.keyPressed == '4'){
+			
+		//}
 		
 	}
 	
