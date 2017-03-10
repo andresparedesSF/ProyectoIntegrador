@@ -117,6 +117,6 @@ public class Palabra implements Comparable<Palabra>{
 
 	@Override
 	public int compareTo(Palabra o) {
-		return this.edad - o.getEdad();
+		return this.nombre.compareTo(o.getNombre());
 	}
 }

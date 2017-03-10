@@ -64,6 +64,11 @@ public class Logica {
 			Collections.sort(palabras, new CPeso());
 		}
 		
+		if(app.key == '3'){
+			palabras.clear();
+			palabras.addAll(backup);
+			Collections.sort(palabras, new CEdad());
+		}
 		
 	}
 	
