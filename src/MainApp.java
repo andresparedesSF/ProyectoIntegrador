@@ -1,3 +1,5 @@
+import java.util.Collections;
+
 import processing.core.PApplet;
 
 public class MainApp extends PApplet{
@@ -22,5 +24,10 @@ public class MainApp extends PApplet{
 	public void draw() {
 		background(0);
 		app.pintar();
+	}
+	
+	@Override
+	public void keyPressed() {
+		app.teclado();		
 	}
 }

@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Collections;
 
 import processing.core.PApplet;
 
@@ -31,7 +32,7 @@ public class Logica {
 			int r = Integer.valueOf(colorDiv[0]);
 			int g = Integer.valueOf(colorDiv[1]);
 			int b = Integer.valueOf(colorDiv[2]);
-			PApplet.printArray(nombre);
+			PApplet.printArray(peso);
 			palabras.add(new Palabra(app,nombre,apellido,cedula,edad,peso,r,g,b));
 		}
 	}
@@ -44,7 +45,12 @@ public class Logica {
 		}
 	}
 	
-	private void ordenar() {
+	public void teclado() {
+		
+		if(app.key == 'q'){
+			Collections.sort(palabras);
+		}
+		
 		
 	}
 	

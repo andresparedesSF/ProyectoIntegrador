@@ -1,6 +1,6 @@
 import processing.core.PApplet;
 
-public class Palabra {
+public class Palabra implements Comparable<Palabra>{
 	
 	private PApplet app;
 	private String nombre,apellido,cedula;
@@ -113,5 +113,10 @@ public class Palabra {
 
 	public void setPosY(int posY) {
 		this.posY = posY;
+	}
+
+	@Override
+	public int compareTo(Palabra o) {
+		return this.peso - o.getPeso();
 	}
 }
